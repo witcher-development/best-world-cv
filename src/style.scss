@@ -24,6 +24,7 @@ body {
 
 	background-color: #2b2b2b;
 
+
 	color: #eeeeee;
 	text-shadow: 0 0 0 #fff;
 
@@ -38,8 +39,6 @@ body {
 
 	overflow: hidden;
 	position: relative;
-
-	border: 1px solid red;
 
 	display: flex;
 
@@ -101,12 +100,17 @@ body {
 
 	margin-bottom: 70px;
 
-	mask-image: url(/src/assets/witcher-logo.png);
-	mask-size: cover;
-	mask-position: center 4%;
-	background-image: url(/src/assets/code-background.jpg);
+
+	background-image: url(/src/assets/witcher-logo-print.jpg);
+	background-position: center 4%;
 	background-size: 105%;
 }
+
+//@media print {
+//	.logo {
+//		mask-image: reset;
+//	}
+//}
 
 .skills {
 	padding: 15px;
