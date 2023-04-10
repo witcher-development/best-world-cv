@@ -44,6 +44,9 @@ body {
 
 	&__left {
 		min-width: 30%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 
 		background-color: #3b3b3b;
 		box-shadow: 0 0 3px 3px #2b2b2b;
@@ -112,13 +115,16 @@ body {
 //	}
 //}
 
+.sidebar-section {
+	padding: 0 15px;
+}
+
 .skills {
-	padding: 15px;
-	padding-bottom: 0;
+	@extend .sidebar-section;
 
 	&__list {
 		margin-top: 10px;
-		margin-bottom: 40px;
+		//margin-bottom: 40px;
 		padding-left: 10px;
 
 		font-size: 13px;
@@ -130,8 +136,19 @@ body {
 	}
 }
 
+.other {
+	@extend .sidebar-section;
+
+	p {
+		margin-top: 7px;
+		padding-left: 10px;
+
+		font-size: 11px;
+	}
+}
+
 .language {
-	padding: 0 15px;
+	@extend .sidebar-section;
 
 	p {
 		margin-top: 10px;
@@ -167,25 +184,28 @@ body {
 }
 
 .exp {
-	margin-top: 40px;
+	margin-top: 20px;
 
 	&__list {
 		margin-top: 15px;
 		padding: 0 10px;
 
-		li {
-			margin-bottom: 35px;
-		}
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
 	}
 
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		p {
+			font-weight: 500;
+		}
 	}
 
 	&__body {
 		margin-top: 10px;
-		margin-left: 10px;
+		margin-left: 15px;
 		font-size: 13px;
 	}
 }
